@@ -1,6 +1,7 @@
 function descendingOrder(n){
-  let d = n.split('');
-  console.log(d);
+  let array = Array.from(n.toString()).map(Number);
+  let sorted = array.sort(function(a, b){return b-a});
+  console.log(sorted);
 }
 
 descendingOrder(654321);
