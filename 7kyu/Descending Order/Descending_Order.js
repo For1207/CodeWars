@@ -1,7 +1,11 @@
 function descendingOrder(n){
   let array = Array.from(n.toString()).map(Number);
   let sorted = array.sort(function(a, b){return b-a});
-  console.log(sorted);
+  let sortedInteger= 0;
+  // for (i=0; i<sorted.length; i++) {
+  //   sortedInteger=sortedInteger + sorted[i]*(sorted.length-i)*10
+  // }
+  console.log(sortedInteger);
 }
 
-descendingOrder(654321);
+descendingOrder(1092837465);
