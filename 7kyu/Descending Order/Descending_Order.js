@@ -7,3 +7,13 @@ function descendingOrder(n){
   }
   return sortedNumber;
 }
+
+// better solution:
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
+// or
+function descendingOrder(n){
+  return +String(n).split('').sort((a, b) => b - a).join('')
+}
