@@ -1,13 +1,23 @@
 function capitalize(s){
-  // let arr = [];
+  let arr = ['',''];
   s = s.split('');
   for (i=0; i<s.length; i++) {
-    if (i % 2 == 0) {
-      s[i] = s[i].toUpperCase();
+    if(i%2===0){
+      s[i]=s[i].toUpperCase();
     }
-    s = s.join();
+    arr[0] = arr[0] + s[i];
+
+    if(i%2!==0){
+      s[i]=s[i].toUpperCase();
+    } else {
+      s[i]=s[i].toLowerCase();
+    }
+    arr[1] = arr[1] + s[i];
   }
-  console.log(s);
+  return arr;
 }
 
-capitalize('asdfghjk');
+// better solution to anallize:
+function capitalize(s){
+  return [0,1].map(r=>[...s].map((c,i)=>i%2===r?c.toUpperCase():c).join(''));
+}
